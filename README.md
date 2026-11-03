@@ -1,7 +1,6 @@
-# cringe-and-racket-website
-The web site for Cringe and racket
+# Cringe & Racket website
 
-A static website (plain HTML/CSS, no build step) with Home, About Us, Events, Electronic Press Kit and Blog pages.
+A static website (plain HTML/CSS, no build step) with Home, About, Music, Gigs, Gallery, Contact and Ramblings pages.
 The repository root is published to GitHub Pages; no build step is required.
 
 ## Deployment (GitHub Pages)
