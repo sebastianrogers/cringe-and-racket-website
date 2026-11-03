@@ -21,11 +21,11 @@ Or with the Azure CLI:
 
 ```bash
 az login
-az group create --name cringe-and-racket-rg --location uksouth
+az group create --name cringe-and-racket-rg --location westeurope
 az staticwebapp create --name cringe-and-racket --resource-group cringe-and-racket-rg --location westeurope --sku Free
 ```
 
-The default Azure region is `uksouth`, used for the resource group. Azure Static Web Apps does not currently offer `uksouth`, so the app itself uses the nearest supported region, `westeurope`. The site content is served from Azure's global edge network regardless.
+The default Azure region is `westeurope`. Azure Static Web Apps does not offer `uksouth`, and the site content is served from Azure's global edge network regardless.
 
 ### 2. Get the deployment token
 
