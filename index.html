@@ -1,20 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home | Cringe and Racket</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F4EBDD">
+  <meta name="description" content="Cringe & Racket – musical entertainment of a questionable vintage.">
+  <title>Cringe & Racket | Home</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-<h1>Cringe and Racket</h1>
-<nav><a href="index.html" aria-current="page">Home</a><a href="about.html">About Us</a><a href="events.html">Events</a><a href="press-kit.html">Press Kit</a><a href="blog.html">Blog</a></nav>
-</header>
-<main>
-<h2>Home</h2>
-<p>Welcome to the official website of Cringe and Racket, the musical duo. Find out more about us, see where we're playing next, and read our latest news.</p>
-</main>
-<footer>&copy; Cringe and Racket</footer>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Cringe and Racket home">
+        <img class="crest" src="images/crest-walnut.png" alt="Cringe and Racket Victorian hat crest" width="170" height="170">
+        <span class="brand-copy"><span class="brand-name">Cringe <span class="amp">&amp;</span> Racket</span><span class="tagline">Musical Entertainment of a Questionable Vintage</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+      <nav class="navigation" id="primary-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="music.html">Music</a>
+        <a href="gigs.html">Gigs</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+	<a href="ramblings.html">Ramblings</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page-content" id="main-content">
+    <p class="eyebrow">Two hats. Two banjos. One questionable proposition.</p>
+    <h1>Welcome to Cringe &amp; Racket</h1>
+    <img class="ornamental-divider" src="images/divider.svg" alt="" width="440" height="25">
+    <p class="intro">An evening of banjos, songs and theatrical nonsense, delivered with period charm and an entirely modern disregard for good sense.</p>
+    <a class="button" href="gigs.html">Upcoming Performances</a>
+  </main>
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('#primary-nav');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      toggle.setAttribute('aria-label', open ? 'Open navigation menu' : 'Close navigation menu');
+      nav.classList.toggle('is-open', !open);
+    });
+  </script>
 </body>
 </html>
