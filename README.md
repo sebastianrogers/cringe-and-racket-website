@@ -1,7 +1,23 @@
 # Cringe & Racket website
 
-A static website (plain HTML/CSS, no build step) with Home, About, Music, Gigs, Gallery, Contact and Ramblings pages.
-The repository root is published to GitHub Pages; no build step is required.
+A static website built with [Eleventy](https://www.11ty.dev/) with Home, About, Music, Gigs, Gallery, Contact and Ramblings pages.
+
+## Structure
+
+- `src/` – site source. Each page is HTML with a small front matter block (`title`, `description`) and only its `<main>` content.
+- `src/_includes/base.njk` – shared page layout (head, script); `src/_includes/header.njk` – shared header.
+- `src/_data/nav.json` – navigation links; add a page here to list it in the menu. The current page is highlighted automatically.
+- `_site/` – build output (git-ignored), published to GitHub Pages.
+
+Use `{{ '/path' | url }}` for links and assets so they work under any base path.
+
+## Local development
+
+```
+npm install
+npm start      # serve with live reload
+npm run build  # build into _site/
+```
 
 ## Deployment (GitHub Pages)
 
