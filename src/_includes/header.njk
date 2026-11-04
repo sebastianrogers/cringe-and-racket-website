@@ -1,0 +1,14 @@
+<header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="{{ '/' | url }}" aria-label="Cringe and Racket home">
+        <img class="crest" src="{{ '/images/crest-walnut.png' | url }}" alt="Cringe and Racket Victorian hat crest" width="170" height="170">
+        <span class="brand-copy"><span class="brand-name">Cringe <span class="amp">&amp;</span> Racket</span><span class="tagline">Musical Entertainment of a Questionable Vintage</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+      <nav class="navigation" id="primary-nav" aria-label="Main navigation">
+        {%- for item in nav %}
+        <a href="{{ item.url | url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+        {%- endfor %}
+      </nav>
+    </div>
+  </header>

@@ -1,0 +1,9 @@
+[
+  { "title": "Home", "url": "/" },
+  { "title": "About", "url": "/about.html" },
+  { "title": "Music", "url": "/music.html" },
+  { "title": "Gigs", "url": "/gigs.html" },
+  { "title": "Gallery", "url": "/gallery.html" },
+  { "title": "Contact", "url": "/contact.html" },
+  { "title": "Ramblings", "url": "/ramblings.html" }
+]

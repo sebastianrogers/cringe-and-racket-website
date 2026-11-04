@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F4EBDD">
+  <meta name="description" content="{{ description }}">
+  <title>{{ title | safe }}</title>
+  <link rel="icon" href="{{ '/favicon.ico' | url }}" sizes="any">
+  <link rel="icon" type="image/png" href="{{ '/images/favicon.png' | url }}">
+  <link rel="stylesheet" href="{{ '/styles.css' | url }}">
+</head>
+<body>
+  {% include "header.njk" %}
+{{ content | safe }}
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('#primary-nav');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      toggle.setAttribute('aria-label', open ? 'Open navigation menu' : 'Close navigation menu');
+      nav.classList.toggle('is-open', !open);
+    });
+  </script>
+</body>
+</html>
